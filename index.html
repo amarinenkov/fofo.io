@@ -46,7 +46,8 @@
       .page {
         min-height: 100svh;
         display: grid;
-        grid-template-rows: 1fr auto;
+        grid-template-rows: auto auto 1fr;
+        align-content: start;
         padding: clamp(24px, 5vw, 48px);
         overflow: hidden;
       }
@@ -67,7 +68,7 @@
       }
 
       .contact {
-        margin: 0;
+        margin: clamp(32px, 8svh, 96px) 0 0;
         font-size: clamp(16px, 1.7vw, 20px);
         line-height: 1.45;
         font-weight: 400;
@@ -111,7 +112,7 @@
 
         .contact {
           justify-self: end;
-          max-width: 56vw;
+          max-width: 58vw;
         }
       }
 
@@ -127,6 +128,7 @@
 
         .contact {
           justify-self: start;
+          margin-top: clamp(28px, 7svh, 52px);
           max-width: 100%;
           font-size: 16px;
         }
