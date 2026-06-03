@@ -46,7 +46,6 @@
       .page {
         min-height: 100svh;
         display: grid;
-        grid-template-rows: auto auto 1fr;
         align-content: start;
         padding: clamp(24px, 5vw, 48px);
         overflow: hidden;
@@ -55,23 +54,27 @@
       .hero {
         min-height: 0;
         display: grid;
+        gap: clamp(4px, 0.7svh, 6px);
         align-items: start;
         justify-items: start;
+        width: min(42vw, 430px);
       }
 
       .hero__image {
         display: block;
-        width: min(42vw, 430px);
+        width: 100%;
         height: auto;
         max-height: min(78svh, 650px);
         object-fit: contain;
       }
 
       .contact {
-        margin: clamp(32px, 8svh, 96px) 0 0;
+        width: 100%;
+        margin: 0;
         font-size: clamp(16px, 1.7vw, 20px);
         line-height: 1.45;
         font-weight: 400;
+        text-align: right;
       }
 
       .contact a {
@@ -89,7 +92,7 @@
           padding-right: max(38px, calc((100vw - 1200px) / 2 + 38px));
         }
 
-        .hero__image {
+        .hero {
           transform: translateX(calc(-1 * min(8vw, 120px)));
         }
       }
@@ -102,17 +105,16 @@
         .hero {
           align-items: start;
           justify-items: center;
+          width: min(68vw, 360px);
         }
 
         .hero__image {
           margin-top: clamp(56px, 12svh, 96px);
-          width: min(68vw, 360px);
           max-height: 72svh;
         }
 
         .contact {
-          justify-self: end;
-          max-width: 58vw;
+          max-width: none;
         }
       }
 
@@ -122,13 +124,14 @@
         }
 
         .hero__image {
-          width: min(76vw, 310px);
           max-height: 70svh;
         }
 
+        .hero {
+          width: min(76vw, 310px);
+        }
+
         .contact {
-          justify-self: start;
-          margin-top: clamp(28px, 7svh, 52px);
           max-width: 100%;
           font-size: 16px;
         }
@@ -139,7 +142,7 @@
           padding-inline: 16px;
         }
 
-        .hero__image {
+        .hero {
           width: 82vw;
         }
       }
@@ -166,11 +169,11 @@
           decoding="async"
           fetchpriority="high"
         >
+        <h1 class="contact">
+          FoFo. IT Engineers.
+          <a href="mailto:info@fofo.io">info@fofo.io</a>
+        </h1>
       </div>
-      <h1 class="contact">
-        FoFo. IT Engineers.
-        <a href="mailto:info@fofo.io">info@fofo.io</a>
-      </h1>
     </main>
     <!-- Yandex.Metrika counter -->
     <script>
